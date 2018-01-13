@@ -10,8 +10,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "SimpleFilter", urlPatterns = "/*")
-public class SimpleFilter implements Filter{
+@WebFilter(filterName = "secondSimpleFilter", urlPatterns = "/*")
+public class SecondSimpleFilter implements Filter{
 
 	
 	@Override
@@ -21,11 +21,11 @@ public class SimpleFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println(">>> start SimpleFilter");
+		System.out.println(">>> start SecondSimpleFilter");
 	
 		chain.doFilter(request, response);
 		
-		System.out.println(">>> end SimpleFilter");
+		System.out.println(">>> end SecondSimpleFilter");
 	}
 
 	@Override
